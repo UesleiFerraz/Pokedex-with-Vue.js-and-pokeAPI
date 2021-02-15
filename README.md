@@ -1,5 +1,5 @@
 # pokedex
-
+A simple pokedex utilizing VueJS to study the API RESTful consumption and to practice my VueJS skills i liked a lot doing this project, i used the PokeAPI
 ## Project setup
 ```
 npm install
