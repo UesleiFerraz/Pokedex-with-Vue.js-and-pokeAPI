@@ -29,14 +29,14 @@ export default {
   created: function () {
     axios.get(this.url).then((res) => {
       this.pokemon.type[0] = res.data.types[0].type.name;
+      console.log(res);
       if (res.data.types.length > 1) {
         this.pokemon.type[1] = res.data.types[1].type.name;
       }
       this.pokemon.back = res.data.sprites.back_default;
       this.pokemon.front = res.data.sprites.front_default;
       this.currentImg = this.pokemon.front
-
-      console.log(this.pokemon);
+      this.num = res.data.id
     });
   },
   data() {
@@ -48,10 +48,10 @@ export default {
         front: "",
         back: "",
       },
+      num: ''
     };
   },
   props: {
-    num: Number,
     name: String,
     url: String,
   },

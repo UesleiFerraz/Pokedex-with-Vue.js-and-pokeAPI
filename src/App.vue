@@ -2,8 +2,8 @@
   <div id="app">
     <div class="column is-half is-offset-one-quarter">
       <input class="input is-rounded is-primary is-light" v-model="busca" type="text" placeholder="Buscar pokemon pelo nome" name="" >
-      <div v-for="(poke,index) in resultadoBusca" :key="poke.url">
-        <Pokemon class="capitalize" :name="poke.name" :url="poke.url" :num="index + 1"/>
+      <div v-for="(poke) in resultadoBusca" :key="poke.url">
+        <Pokemon class="capitalize" :name="poke.name" :url="poke.url"/>
       </div>
     </div>
   </div>
